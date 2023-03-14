@@ -20,9 +20,10 @@ The service worker will run every [X minutes](ExchangeEventGenerator/appsettings
 1. Add a new app registration to your target tenant
 2. Create a certificate on your local machine and upload it for the authentication with azure  
 e.g. follow the first half of this [guide](https://blogs.aaddevsup.xyz/2020/07/using-msal-net-to-perform-the-client-credentials-flow-with-a-certificate-instead-of-a-client-secret-in-a-netcore-console-appliction/)
-3. Add your tenant id, client id and certificate thumbprint to the [appsettings file](ExchangeEventGenerator/appsettings.json)
-4. In that file you can also adjust the "settings" section to your liking
-5. *(Optional)* Adjust [event templates](ExchangeEventGenerator/eventTemplates.json):
+3. Add the following app permissions on azure: "User.Read.All" and "Calendars.ReadWrite"
+4. Add your tenant id, client id and certificate thumbprint to the [appsettings file](ExchangeEventGenerator/appsettings.json)
+5. In that file you can also adjust the "settings" section to your liking
+6. *(Optional)* Adjust [event templates](ExchangeEventGenerator/eventTemplates.json):
 
 ### Event Template Layout
 |       Property        |                                    Description                                    |                                                                                     Expected Value                                                                                     |
